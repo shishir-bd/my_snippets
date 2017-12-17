@@ -39,3 +39,22 @@ $('#total').val( total );
             });
         }
     });
+
+//select deslect all checkboxs
+$('#globalCheckbox').click(function(){
+    if($(this).prop("checked")) {
+	$(".checkBox").prop("checked", true);
+    } else {
+	$(".checkBox").prop("checked", false);
+    }                
+});
+
+
+$('.checkBox').click(function(){
+    if($(".checkBox").length == $(".checkBox:checked").length) {
+	$("#globalCheckbox").prop("checked", true);
+    }else {
+	$("#globalCheckbox").prop("checked", false);            
+    }
+});
+
