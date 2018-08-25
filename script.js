@@ -58,3 +58,19 @@ $('.checkBox').click(function(){
     }
 });
 
+    function getLoc(id,type,target) {
+        $.ajax({
+            type: 'POST',
+            url: 'ajax_handle.php',
+            data:{'id':id,'type':type,'action':'get_dist'},
+            beforeSend: function () {
+                $('.'+target).html('<option>Loading...</option>');
+                $('select.'+target).select2().trigger('change');
+            },
+            success: function(htmldata)
+            {
+                $('.'+target).html(htmldata);
+                $('select.'+target).select2().trigger('change');
+            }
+        });
+    }
