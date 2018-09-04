@@ -100,6 +100,72 @@ $.validator.setDefaults({
     }
 });
 
+/* jquery validator*/
+var form = $("#new_member_reg");
+			form.validate({
+            rules: {
+                "data[full_name]" : {
+                    required : true,
+                    minlength: 3
+                },
+                "data[email]" : {
+                    required: true,
+                    email: true
+                },
+                "data[rank]" : "required",
+                "data[mobile]" : "required"
+            },
+            messages: {
+                "data[full_name]" : {
+                    required : "Please enter your fullname",
+                    minlength: "Fullname minimum lenght 3"
+                },
+                "data[email]" : "Please enter a valid email address",
+                "data[rank]" : "Please provide your rank info",
+                "data[mobile]" : "Please provide your mobile no"
+            },
+            //ignore: [],
+            //debug: true,    
+            highlight: function(element, errorClass, validClass) {
+                var elem = $(element);
+                if (elem.hasClass("select2-offscreen")) {
+                    $("#s2id_" + elem.attr("id") + " ul").addClass(errorClass);
+                } else {
+                    elem.closest('.form-group').addClass('has-error');
+                }
+
+                //$(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                var elem = $(element);
+                if (elem.hasClass("select2-offscreen")) {
+                    $("#s2id_" + elem.attr("id") + " ul").removeClass(errorClass);
+                } else {
+                    elem.closest('.form-group').removeClass('has-error');
+                }
+
+                //$(element).closest('.form-group').removeClass('has-error');
+            },
+            errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            },
+
+            onfocusout: false,
+            invalidHandler: function(form, validator) {
+                var errors = validator.numberOfInvalids();
+                if (errors) {                    
+                    validator.errorList[0].element.focus();
+                }
+            } 
+        });
+
+if (form.valid() == true) {}
 
 
 
