@@ -102,3 +102,20 @@ $.validator.setDefaults({
 
 
 
+
+<div class="input-group">
+    <span class="input-group-addon" title="* Price" id="priceLabel">Price</span>
+    <input type="number" id="searchbygenerals_priceFrom" name="searchbygenerals[priceFrom]" required="required" class="form-control" value="0">
+    <span class="input-group-addon">-</span>
+    <input type="number" id="searchbygenerals_priceTo" name="searchbygenerals[priceTo]" required="required" class="form-control" value="0">
+  
+    <!-- insert this line -->
+    <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
+  
+    <select id="searchbygenerals_currency" name="searchbygenerals[currency]" class="form-control">
+        <option value="1">HUF</option>
+        <option value="2">EUR</option>
+    </select>
+</div>
+
+
