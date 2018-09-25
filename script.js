@@ -185,3 +185,84 @@ if (form.valid() == true) {}
 </div>
 
 
+
+
+var specialChars = "~!@#$%^&*)(\+=._-";
+var numaricdisit = "013456789";
+var ne =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[A-Za-z0-9~!@#$%^&*)(\+=._-]{1,20}$/;
+
+//var ne = /^(?=.*\d)(?=.*[a-z])(?=.*&[A-Z])[0-9a-zA-Z]{8,}$/;
+$(function(){
+    $('#change_pass_form').validate({
+        rules: {
+            old_pass: "required",
+            new_pass: "required",
+            re_new_pass: {
+                equalTo: "#new_pass"
+            }
+        }
+    });
+
+    $('.submit').click(function(e) {
+        var password = $('#new_pass').val();
+        if ( (password.length < 6) || password.length == 0) {
+
+            alert("Password should be 6 digit or more");
+            $("#new_pass").focus();
+            return false;
+        }else if (!ne.test(password)) {
+
+            if(checkNumaricNumber(password)){
+                alert("Numeric number is missing of password string.");
+                $("#new_pass").focus();
+                return false;
+            }else if(checkUpperCase(password)){
+                alert("Upper case letter is missing of password string.");
+                $("#new_pass").focus();
+                return false;
+            }else if(checkSpecialChars(password)){
+                alert("Special Character is missing of password string.");
+                $("#new_pass").focus();
+                return false;
+            }else if(checkLowerCase(password)){
+                alert("Lower case letter is missing of password string.");
+                $("#new_pass").focus();
+                return false;
+            }
+        }
+    });
+
+});
+function checkSpecialChars (string){
+    for(i = 0; i < specialChars.length;i++){
+        if(string.indexOf(specialChars[i]) > -1){
+            return false;
+        }
+    }
+    return true;
+}
+function checkNumaricNumber (string){
+    for(i = 0; i < numaricdisit.length;i++){
+        if(string.indexOf(numaricdisit[i]) > -1){
+            return false;
+        }
+    }
+    return true;
+}
+
+function checkUpperCase(string1){
+    if ((string1.replace(/[^A-Z]/g, "").length) == 0) {
+        return true;
+    }
+    return false;
+}
+
+function checkLowerCase(string1){
+    for(i = 0; i < string1.length;i++){
+        var character = string1.charAt(i);
+        if(character == character.toLowerCase()){
+            return false;
+        }
+    }
+    return true;
+}
