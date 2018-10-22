@@ -266,3 +266,8 @@ function checkLowerCase(string1){
     }
     return true;
 }
+
+//check if function is available?
+if (typeof uploadFile == 'function') {
+}
+
