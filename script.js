@@ -271,3 +271,7 @@ function checkLowerCase(string1){
 if (typeof uploadFile == 'function') {}
 if ($.fn.uploadFile) {}
 
+
+$(document).on("input", ".numeric", function() {
+    this.value = this.value.replace(/\D/g,'');
+});
