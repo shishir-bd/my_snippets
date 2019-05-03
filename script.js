@@ -276,3 +276,13 @@ if ($.fn.classyNav) {$('#newspaperNav').classyNav();}
 $(document).on("input", ".numeric", function() {
     this.value = this.value.replace(/\D/g,'');
 });
+
+
+<div class="input-group">
+	<div class="form-group">
+	    <input type="file" name="excel" class="form-control" id="excel" placeholder="File">
+	</div>               
+	<div class="input-group-btn">
+	    <input type="submit" class="btn btn-primary upload-btn" name="upload" value="Upload">
+	</div>
+</div>
