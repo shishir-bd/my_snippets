@@ -275,6 +275,7 @@ if ($.fn.classyNav) {$('#newspaperNav').classyNav();}
 
 $(document).on("input", ".numeric", function() {
     this.value = this.value.replace(/\D/g,'');
+	//this.value = this.value.match(/^\d+\.?\d{0,2}/);
 });
 
 
