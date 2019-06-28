@@ -287,3 +287,15 @@ $(document).on("input", ".numeric", function() {
 	    <input type="submit" class="btn btn-primary upload-btn" name="upload" value="Upload">
 	</div>
 </div>
+
+
+
+
+$(':input','#custom_filter_form')
+		  .not(':button, :submit, :reset, :hidden')
+		  .val('')
+		  .prop('checked', false)
+		  .prop('selected', false);
+
+
+$("#form").trigger('reset');
