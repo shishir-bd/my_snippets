@@ -113,7 +113,13 @@ var form = $("#new_member_reg");
                     email: true
                 },
                 "data[rank]" : "required",
-                "data[mobile]" : "required"
+                "data[mobile]" : "required",
+		    telephone: {
+			  required: '#mobile:blank'
+		     },
+		     mobile: {
+			  required: '#telephone:blank'
+		     }
             },
             messages: {
                 "data[full_name]" : {
