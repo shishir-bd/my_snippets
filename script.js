@@ -305,3 +305,8 @@ $(':input','#custom_filter_form')
 
 
 $("#form").trigger('reset');
+
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
