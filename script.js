@@ -310,3 +310,18 @@ $("#form").trigger('reset');
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
+
+
+
+
+
+
+
+//============ how Weird u r!
+const chaine = 'b' + 'a' + + 'n' + 'a';
+console.log(chaine.toLowerCase());
+
+"100"+1
+"100"-1
+
