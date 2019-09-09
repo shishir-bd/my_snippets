@@ -315,7 +315,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 https://craftpip.github.io/jquery-confirm/
 
-
+if (in_array(null, $array, true) || in_array('', $array, true)) {
+    // There are null (or empty) values.
+  }
 
 
 
