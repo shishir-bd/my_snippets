@@ -332,6 +332,12 @@ https://notifyjs.jpillora.com/
 http://hayageek.com/docs/jquery-upload-file.php
 http://blueimp.github.io/jQuery-File-Upload/
 
+//file input button
+http://markusslima.github.io/bootstrap-filestyle/options.html
+
+//---------
+https://select2.org/
+
 
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
