@@ -321,6 +321,12 @@ if (in_array(null, $array, true) || in_array('', $array, true)) {
 
 
 
+//notifications
+http://ksylvest.github.io/jquery-growl/
+https://ned.im/noty/#/
+https://codeseven.github.io/toastr/
+https://notifyjs.jpillora.com/
+
 
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
