@@ -328,6 +328,11 @@ https://codeseven.github.io/toastr/
 https://notifyjs.jpillora.com/
 
 
+//file upload
+http://hayageek.com/docs/jquery-upload-file.php
+http://blueimp.github.io/jQuery-File-Upload/
+
+
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
 console.log(chaine.toLowerCase());
