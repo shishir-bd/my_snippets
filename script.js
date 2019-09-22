@@ -119,7 +119,16 @@ var form = $("#new_member_reg");
 		     },
 		     mobile: {
 			  required: '#telephone:blank'
-		     }
+		     },
+		
+		"data[deposit]" : {
+                    require_from_group: [1, ".amount"],
+                    number: true,
+                },
+                "data[withdraw]" : {
+                    require_from_group: [1, ".amount"],
+                    
+                }    
             },
             messages: {
                 "data[full_name]" : {
