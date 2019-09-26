@@ -347,6 +347,11 @@ http://markusslima.github.io/bootstrap-filestyle/options.html
 //---------
 https://select2.org/
 
+//datepicker
+http://t1m0n.name/air-datepicker/docs/
+https://www.daterangepicker.com/#usage
+https://eonasdan.github.io/bootstrap-datetimepicker/
+
 
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
