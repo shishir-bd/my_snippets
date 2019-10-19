@@ -128,7 +128,14 @@ var form = $("#new_member_reg");
                 "data[withdraw]" : {
                     require_from_group: [1, ".amount"],
                     
-                }    
+                },
+		'data[bank_name]': {
+                    required: {
+                        depends: function(element){
+                            return $(".btn-group input:radio:checked").val() == 'Cheque';
+                        }
+                    }
+                },
             },
             messages: {
                 "data[full_name]" : {
