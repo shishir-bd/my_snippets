@@ -329,13 +329,28 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 
-https://craftpip.github.io/jquery-confirm/
+
 
 if (in_array(null, $array, true) || in_array('', $array, true)) {
     // There are null (or empty) values.
   }
 
 
+$( ".input-wrapper .input-single" ).each(function( index ) {
+                $(this).find('input');
+
+                var input =  $(this).find('input');
+                $(input).each(function (i) {
+                    var fnm = $( this ).attr('name').split('[');
+                    fnm = "data["+index+"]["+fnm[0]+"]";
+                    $( this ).attr('name',fnm);
+                })
+
+            });
+
+
+
+https://craftpip.github.io/jquery-confirm/
 
 //notifications
 http://ksylvest.github.io/jquery-growl/
@@ -358,6 +373,10 @@ https://select2.org/
 http://t1m0n.name/air-datepicker/docs/
 https://www.daterangepicker.com/#usage
 https://eonasdan.github.io/bootstrap-datetimepicker/
+
+
+
+
 
 
 //============ how Weird u r!
