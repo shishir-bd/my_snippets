@@ -350,6 +350,37 @@ $( ".input-wrapper .input-single" ).each(function( index ) {
 
 
 
+
+$(".select2").select2({
+            minimumInputLength: 2,
+            //templateResult: formatState, //this is for append country flag.
+            ajax: {
+                url: '<?=base_url('admin/assign_candidate/clist');?>',
+                dataType: 'json',
+                type: "POST",
+                data: function (term) {
+                    return {
+                        term: term
+                    };
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data, function (item) {
+                            return {
+                                text: item.name,
+                                id: item.id
+                            }
+                        })
+                    };
+                }
+
+            }
+        });
+
+
+
+
+
 https://craftpip.github.io/jquery-confirm/
 
 //notifications
