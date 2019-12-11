@@ -378,7 +378,9 @@ $(".select2").select2({
         });
 
 
-
+$('.number_plate').on('change',function(){
+	console.log($(this).find('option:selected').val());
+})
 
 
 https://craftpip.github.io/jquery-confirm/
