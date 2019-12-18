@@ -383,6 +383,27 @@ $('.number_plate').on('change',function(){
 })
 
 
+
+function validate() {
+	var mobile = $("#mobile").val();		
+	var pattern = /^01[15-9]\d{8}$/;
+	if (!pattern.test(mobile)){
+		$("#mobile").addClass("has_error");
+		$(".invalid_phone_no").removeClass("hidden");
+		$("#hidden_no").val('');
+		$("#capcode").attr("disabled","disabled");
+		return false;
+	}else{
+		$("#hidden_no").val('88'+mobile);
+
+		$("#mobile").removeClass("has_error");
+		$(".invalid_phone_no").addClass("hidden");
+		$("#capcode").removeAttr("disabled");
+		return true;
+	}			 
+}
+
+
 https://craftpip.github.io/jquery-confirm/
 
 //notifications
