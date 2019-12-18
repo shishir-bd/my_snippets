@@ -404,6 +404,27 @@ function validate() {
 }
 
 
+
+$("#mobile").on("keyup", function(e) {
+	 $(this).val($(this).val().replace(/([^+0-9]+)/gi, ''));                    
+});
+
+
+var input = document.querySelector("#mobile");
+var iti = window.intlTelInput(input,{
+	utilsScript: "assets/build/js/utils.js",
+	initialCountry: "bd"
+});
+
+var isValid = iti.isValidNumber();
+if(!isValid){
+	$('.invalid_phone_no').removeClass('hidden').text('Invalid Phone Number');
+	return false;
+}
+
+
+
+
 https://craftpip.github.io/jquery-confirm/
 
 //notifications
