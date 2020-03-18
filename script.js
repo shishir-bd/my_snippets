@@ -430,6 +430,13 @@ function sleep(delay) {
 
 
 
+
+
+if (!session_id()) @session_start();
+
+
+
+
 https://craftpip.github.io/jquery-confirm/
 
 //notifications
