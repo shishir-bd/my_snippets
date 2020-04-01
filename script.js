@@ -429,6 +429,8 @@ function sleep(delay) {
 }
 
 
+var diff = $(old_array).not(new_array).get(); //array difference
+
 
 
 
