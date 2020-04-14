@@ -470,6 +470,7 @@ https://www.malot.fr/bootstrap-datetimepicker/
 
 http://parsleyjs.org/
 
+https://www.jqueryscript.net/form/Two-side-Multi-Select-Plugin-with-jQuery-multiselect-js.html
 
 
 
