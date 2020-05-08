@@ -431,6 +431,10 @@ function sleep(delay) {
 
 var diff = $(old_array).not(new_array).get(); //array difference
 
+//window scroll
+window.scrollTo(0,0);
+$(window).scrollTop(0);
+window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
 
