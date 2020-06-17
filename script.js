@@ -436,6 +436,9 @@ window.scrollTo(0,0);
 $(window).scrollTop(0);
 window.scrollTo({ top: 0, behavior: 'smooth' });
 
+$(function() {
+    // Code here
+});
 
 
 if (!session_id()) @session_start();
