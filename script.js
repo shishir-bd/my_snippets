@@ -479,7 +479,7 @@ http://parsleyjs.org/
 
 https://www.jqueryscript.net/form/Two-side-Multi-Select-Plugin-with-jQuery-multiselect-js.html
 
-
+https://sweetalert.js.org/
 
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
