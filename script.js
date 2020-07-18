@@ -481,6 +481,18 @@ https://www.jqueryscript.net/form/Two-side-Multi-Select-Plugin-with-jQuery-multi
 
 https://sweetalert.js.org/
 
+
+
+//charts
+* http://nhn.github.io/tui.chart/latest/
+https://developers.google.com/chart/interactive/docs
+https://www.chartjs.org/samples/latest/
+https://plotly.com/javascript/
+https://www.flotcharts.org/
+
+
+
+
 //============ how Weird u r!
 const chaine = 'b' + 'a' + + 'n' + 'a';
 console.log(chaine.toLowerCase());
