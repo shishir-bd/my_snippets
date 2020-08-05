@@ -144,7 +144,17 @@ var form = $("#new_member_reg");
                 },
                 "data[email]" : "Please enter a valid email address",
                 "data[rank]" : "Please provide your rank info",
-                "data[mobile]" : "Please provide your mobile no"
+                "data[mobile]" : "Please provide your mobile no",
+// 		    "data[amount]": {
+// 				min: function() {
+// 					toastr.error('Amount should be at least equal to EMI');
+// 					// $.alert({
+// 					// 	title: 'Alert!',
+// 					// 	type:'red',
+// 					// 	content: 'Amount should be at least equal to EMI',
+// 					// });
+// 				},
+// 			},
             },
             //ignore: [],
             //debug: true,    
