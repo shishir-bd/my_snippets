@@ -215,7 +215,7 @@ if (form.valid() == true) {}
         <option value="2">EUR</option>
     </select>
 </div>
-
+https://stackoverflow.com/questions/29511300/bootstrap-input-group-with-text-select-and-button
 
 
 
